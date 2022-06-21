@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_bottom"
+    android:label="@string/first_fragment_label"
+    app:startDestination="@id/menus_list">
+    <fragment
+        android:id="@+id/menus_list"
+        android:name="com.example.myrestaurant.List.MenuList"
+        android:label="restaurant_tab"
+        tools:layout="@layout/menu_tab" >
+        <action
+            android:id="@+id/action_restaurantList_to_addItemDialog"
+            app:destination="@id/addItemDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/addItemDialog"
+        android:name="com.example.myrestaurant.dialog.AddItemDialog"
+        android:label="item_description"
+        tools:layout="@layout/item_description" >
+        <action
+            android:id="@+id/action_addItemDialog_to_restaurantList"
+            app:destination="@id/menus_list" />
+    </dialog>
+</navigation>

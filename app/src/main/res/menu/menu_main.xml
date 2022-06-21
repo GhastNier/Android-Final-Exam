@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/min_prince"
+        android:title="@string/minimum_price" />
+    <item
+        android:id="@+id/max_price"
+        android:title="@string/maximum_price" />
+    <item
+        android:id="@+id/rating"
+        android:title="@string/highest_rating"
+        />
+    <item
+        android:id="@+id/rating_l"
+        android:title="@string/lowest_rating"
+        />
+    <item
+        android:id="@+id/high_delivery_fees"
+        android:title="@string/low_fees" />
+    <item
+        android:id="@+id/small_delivery_fees"
+        android:title="@string/high_fees" />
+    <item
+        android:id="@+id/vege"
+        android:title="@string/vegan" />
+</menu>

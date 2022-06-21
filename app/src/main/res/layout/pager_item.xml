@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    tools:context=".List.MenuList">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:clickable="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/pager_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:contentDescription="@string/antipasto"
+            android:scaleType="centerCrop"
+            android:src="@drawable/antepasto"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:alpha="1"
+            android:layout_marginTop="-75dp"
+            android:layout_below="@+id/pager_image"
+            app:cardBackgroundColor="@color/secondaryDarkColor"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape"/>
+
+            <TextView
+                android:id="@+id/food_type"
+                android:alpha="1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="25dp"
+                android:text="@string/antipasto"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                />
+
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>

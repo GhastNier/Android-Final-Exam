@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.MyRestaurant.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:gravity="center"
+                app:popupTheme="@style/Theme.MyRestaurant.PopupOverlay"/>
+
+
+            <TextView
+                android:id="@+id/cart_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/secondaryDarkColor"
+                android:padding="5dp"
+                android:text="@string/cart_value"
+                android:textColor="@color/material_dynamic_primary100"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <include
+            android:id="@+id/superduper"
+            layout="@layout/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="370dp" />
+
+        <include
+            android:id="@+id/menu"
+            layout="@layout/content_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="306dp"
+            android:layout_below="@id/superduper"
+            android:layout_gravity="bottom" />
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
